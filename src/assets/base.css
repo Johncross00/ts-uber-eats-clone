@@ -19,6 +19,13 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --background-color-light: #f5f5f5;
+  --background-color-dark: #1e1e1e;
+  --text-color-dark: #fff;
+  --search-bg-color-light: #f6f6f6;
+  --search-bg-color-dark: #2e2e2e;
+  --search-hover-bg-color-light: #eeeeee;
+  --search-hover-bg-color-dark: #3e3e3e;
 }
 
 /* semantic color variables for this project */
@@ -32,6 +39,15 @@
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
+
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --search-bg-color: var(--search-bg-color-dark);
+  --search-hover-bg-color: var(--search-hover-bg-color-dark);
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --search-bg-color: var(--search-bg-color-light);
+  --search-hover-bg-color: var(--search-hover-bg-color-light);
 
   --section-gap: 160px;
   --note-bg-color: #eeeeee;
@@ -51,6 +67,11 @@
 
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --search-bg-color: var(--search-bg-color-dark);
+    --search-hover-bg-color: var(--search-hover-bg-color-dark);
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);

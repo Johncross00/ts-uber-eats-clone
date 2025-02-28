@@ -101,7 +101,7 @@ onMounted(makeDataRestaurant)
         height: 60px;
         width: 400px;
         padding-left: 20px;
-        box-shadow: 0px 5px 5px #eeeeee;
+        box-shadow: 0px 0px 5px #ffffff;
         font-size: 1.2rem;
         outline: none;
       }
@@ -110,16 +110,18 @@ onMounted(makeDataRestaurant)
         position: absolute;
         top: 100%;
         width: 100%;
-        background-color: #f6f6f6;
+        background-color: var(--search-bg-color);
       }
 
       .container--restaurant--search {
         display: flex;
         align-items: center;
         padding: 10px;
+        background-color: var(--search-bg-color);
+        color: var(--text-color);
 
         &:hover {
-          background-color: #eeeeee;
+          background-color: var(--search-hover-bg-color);
         }
 
         .wrapper--img {

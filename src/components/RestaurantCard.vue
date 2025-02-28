@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-
-interface RestaurantType {
-  name: string
-  note: string
-  image: string
-  drive_time: string
-}
+import { RestaurantType } from '../types/restaurant'
 
 const props = defineProps<{ info_restaurant: RestaurantType }>()
 

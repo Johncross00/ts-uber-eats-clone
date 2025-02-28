@@ -1,79 +1,72 @@
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+interface RestaurantType {
+  name: string
+  note: string
+  image: string
+  drive_time: string
+}
+
+const props = defineProps<{ info_restaurant: RestaurantType }>()
+
+const backgroundStyle = ref<Record<string, string>>({})
+
+onMounted(() => {
+  backgroundStyle.value = {
+    backgroundImage: `url(${props.info_restaurant.image})`,
+  }
+})
+</script>
+
 <template>
   <div class="restaurant--card">
     <div :style="backgroundStyle" class="restaurant--image"></div>
     <div class="restaurant--informations">
       <div class="top">
         <p class="name">{{ info_restaurant.name }}</p>
-        <p class="note"><span>{{ info_restaurant.note }}</span></p>
+        <p class="note">
+          <span>{{ info_restaurant.note }}</span>
+        </p>
       </div>
       <p class="time">{{ info_restaurant.drive_time }}</p>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted } from "vue";
-
-// Définition du type pour les informations du restaurant
-interface RestaurantType {
-  name: string;
-  note: string;
-  image: string;
-  drive_time: string;
-}
-
-// Définition des props avec TypeScript
-const props = defineProps<{ info_restaurant: RestaurantType }>();
-
-const backgroundStyle = ref<Record<string, string>>({});
-
-onMounted(() => {
-  backgroundStyle.value = {
-    backgroundImage: `url(${props.info_restaurant.image})`,
-  };
-});
-</script>
-
 <style scoped lang="scss">
-:root {
-  --note-bg-color: #eeeeee;
-  --note-size: 30px;
-  --note-font-size: 0.8rem;
-  --time-font-size: 0.9rem;
-  --text-color: #000;
-  --background-color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --note-bg-color: #444;
-    --text-color: #fff;
-    --background-color: #333;
-  }
-}
-
 .restaurant--card {
   width: 100%;
   height: 30vh;
+  padding: 5px;
   margin-bottom: 30px;
   margin-top: 10px;
-  background-color: var(--background-color);
   color: var(--text-color);
+  font-size: 20px;
+  font-weight: bold;
 
   p {
     margin: 0;
   }
 
   .restaurant--image {
-    height: 70%;
+    height: 85%;
     background-size: cover;
     background-position: center;
-    border-radius: 25px;
+    border-radius: 50px;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+
+    &:hover {
+      transform: scale(1.08);
+      box-shadow: 0px 0px 40px var(--box-shadow-color);
+    }
   }
 
   .restaurant--informations {
     .top {
-      margin: 10px 0;
+      margin: 10px 0px;
       display: flex;
       align-items: center;
       justify-content: space-between;

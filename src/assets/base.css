@@ -34,6 +34,13 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+  --note-bg-color: #eeeeee;
+  --note-size: 30px;
+  --note-font-size: 0.8rem;
+  --time-font-size: 0.9rem;
+  --text-color: #000;
+  --background-color: #fff;
+  --box-shadow-color: #00000092;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +54,10 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+    --note-bg-color: #444;
+    --text-color: #fff;
+    --background-color: #333;
+    --box-shadow-color: #ffffff92;
   }
 }
 

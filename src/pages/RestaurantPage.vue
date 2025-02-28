@@ -48,7 +48,7 @@ const restaurant = ref<RestaurantType | undefined>(
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+  background: var(--color-background);
   min-height: 100vh;
   // width: 100%;
 }
@@ -63,7 +63,7 @@ const restaurant = ref<RestaurantType | undefined>(
   -webkit-backdrop-filter: blur(10px);
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  color: var(--text-color);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -90,7 +90,7 @@ const restaurant = ref<RestaurantType | undefined>(
   width: 90%;
   max-width: 600px;
   margin-top: 6rem;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .image-container {
@@ -166,7 +166,7 @@ const restaurant = ref<RestaurantType | undefined>(
   }
 
   .label {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
     font-size: 0.9rem;
   }
 }

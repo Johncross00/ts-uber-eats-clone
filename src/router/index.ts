@@ -2,7 +2,6 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from "vue-router"
 import HomePage from "../pages/HomePage.vue";
 import RestaurantPage from "../pages/RestaurantPage.vue";
 
-// Définition du type des routes avec RouteRecordRaw
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
